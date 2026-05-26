@@ -8,6 +8,16 @@ from models.base_model import BaseModel
 class TestFileStorage(unittest.TestCase):
     """Test cases for the FileStorage class"""
 
+    def test_file_path(self):
+        """Test that __file_path is a string"""
+        obj = FileStorage()
+        self.assertIsInstance(obj._FileStorage__file_path, str)
+
+    def test_objects(self):
+        """Test that __objects is a dictionary"""
+        obj = FileStorage()
+        self.assertIsInstance(obj._FileStorage__objects, dict)
+
     def test_instance(self):
         """Test that FileStorage creates a valid instance"""
         obj = FileStorage()
